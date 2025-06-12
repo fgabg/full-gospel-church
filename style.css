@@ -36,6 +36,12 @@ nav {
     gap: 20px;
     flex-wrap: wrap;
 }
+.btn img.icon {
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
 
 nav a {
     color: #fff;
