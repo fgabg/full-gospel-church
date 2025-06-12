@@ -1,99 +1,100 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+/* Base colors */
+:root {
+  --background-color: #faf8f5;      /* off-white cream */
+  --primary-color: #c69c6d;         /* warm gold */
+  --secondary-color: #6e5849;       /* warm brown */
+  --text-color: #4a4a4a;            /* dark gray for text */
+  --link-color: #c69c6d;            /* same warm gold for links */
+  --button-bg-color: #c69c6d;       /* gold button background */
+  --button-hover-bg: #a37743;       /* darker gold hover */
+  --header-bg-color: #fff;          /* clean white for header */
 }
 
+/* Body and background */
 body {
-    background: #fff;
-    color: #333;
-    line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-}
-
+/* Header */
 header {
-    background: #003366;
-    color: #fff;
-    padding: 20px 0;
+  background-color: var(--header-bg-color);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 header h1 {
-    text-align: center;
-    margin-bottom: 10px;
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-.btn img.icon {
-  height: 20px;
-  width: 20px;
-  vertical-align: middle;
-  margin-right: 8px;
-}
-
+/* Navigation */
 nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+  color: var(--link-color);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-.hero {
-    background: url('https://source.unsplash.com/1600x600/?church') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
+nav a:hover {
+  color: var(--button-hover-bg);
 }
 
-.hero .btn {
-    display: inline-block;
-    background: #0066cc;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
-    text-decoration: none;
+/* Buttons */
+button, .btn {
+  background-color: var(--button-bg-color);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.mission {
-    background: #f4f4f4;
-    text-align: center;
-    padding: 40px 20px;
+button:hover, .btn:hover {
+  background-color: var(--button-hover-bg);
 }
 
-.quick-links {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 30px 0;
-    text-align: center;
-    background: #e0e0e0;
+/* Links */
+a {
+  color: var(--link-color);
+  transition: color 0.3s ease;
 }
 
-.quick-links .link-box {
-    flex: 1;
-    min-width: 150px;
-    margin: 10px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+a:hover {
+  color: var(--button-hover-bg);
 }
 
+/* Sections */
+section {
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Footer - updated per your request */
 footer {
-    background: #003366;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+  background: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsive text */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  nav a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
 }
